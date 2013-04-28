@@ -1,11 +1,11 @@
-set rtp+=./vimtrp/bundle
+set rtp+=./vimrtp/bundle
 set rtp+=./vimrtp/bundle/vundle
 set nocp
 filetype off
 "call pathogen#infect()
 "call pathogen#helptags()
 
-call vundle#rc("./bundle")
+call vundle#rc("./vimrtp/bundle")
 
 " let Vundle manage Vundle
 " required!

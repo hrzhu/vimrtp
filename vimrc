@@ -16,8 +16,8 @@ Bundle 'klen/python-mode'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/taglist.vim'
-
 
 "gui
 if has("gui_running")
@@ -53,6 +53,9 @@ let g:pymode_lint_write = 0 "disable pllint checking when saving
 let g:pymode_folding = 0 "disable auto-folding
 let g:pymode_rope_guess_project = 0
 
+"syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
 
 "visual
 set nu
@@ -64,17 +67,25 @@ if &term =~ '256color'
   set t_ut=
 endif
 colorscheme molokai
+
 set laststatus=2
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}\ " ""
 set statusline+=%f
 "set statusline+=%-3.3n\ "buffer number
 "set statusline+=%f\ "filename
 set statusline+=%h%m%r%w\ " ""status flags
-set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
+set statusline+=\[%{strlen(&ft)?&ft:'none'}]\ " " file type
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 set statusline+=%= "right align remainder
+
 set statusline+=0x%-8B "character value
 set statusline+=%-14(%l,%c%V%) "line, character
 set statusline+=%<%P "file position
+
 set colorcolumn=80
 hi ColorColumn ctermbg=white guibg=white
 set hlsearch

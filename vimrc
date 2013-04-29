@@ -19,6 +19,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'wlangstroth/vim-racket'
+Bundle 'tpope/vim-endwise'
 
 "gui
 if has("gui_running")

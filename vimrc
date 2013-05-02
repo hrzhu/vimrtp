@@ -107,6 +107,7 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1 "Make Taglist appears to the right
+let g:Tlist_Ctags_Cmd='/usr/bin/ctags-exuberant'
 set splitright "Make NerdTree open a split to the right
 
 "keybindings

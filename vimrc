@@ -20,11 +20,17 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'wlangstroth/vim-racket'
 Bundle 'tpope/vim-endwise'
+"Bundle 'vim-scripts/FencView.vim'
 
 "gui
 if has("gui_running")
   set guioptions-=r
 endif
+
+"auto detect file encoding
+set fileencodings=utf-8,gb2312,ucs-bom,euc-cn,euc-tw,gb18030,gbk,cp936
+"let g:fencview_autodetect = 1
+"let g:fencview_checklines = 10
 
 "basic setting
 set autochdir "make working directory the same as the file being edited

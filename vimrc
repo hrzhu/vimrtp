@@ -61,10 +61,6 @@ let g:pymode_lint_write = 0 "disable pllint checking when saving
 let g:pymode_folding = 0 "disable auto-folding
 let g:pymode_rope_guess_project = 0
 
-"syntastic
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-
 "visual
 set nu
 set t_Co=256
@@ -75,6 +71,15 @@ if &term =~ '256color'
   set t_ut=
 endif
 colorscheme molokai
+
+"syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_enable_highlighting=1
+hi SyntasticWarning ctermbg=069 guibg=069
+hi SyntasticError  ctermbg=141  guibg=141
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=E221'
 
 set laststatus=2
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}\ " ""
@@ -95,13 +100,16 @@ set statusline+=%-14(%l,%c%V%) "line, character
 set statusline+=%<%P "file position
 
 set colorcolumn=80
-hi ColorColumn ctermbg=white guibg=white
+hi ColorColumn ctermbg=blue guibg=blue
 set hlsearch
-hi Search ctermbg=red guibg=red
+hi Search ctermbg=124 guibg=124
+" Map <C-L> (redraw screen) to also turn off search highlighting until the
+" next search
+nnoremap <C-L> :nohl<CR><C-L>
 set showmatch
 "set showfulltag
 "show trailing whitespaces
-highlight ExtraWhitespaces ctermbg=white guibg=white
+highlight ExtraWhitespaces ctermbg=blue guibg=blue
 match ExtraWhitespaces /\s\+$/
 "set list
 "set lcs=trail:.

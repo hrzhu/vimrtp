@@ -53,7 +53,7 @@ autocmd FileType ruby setlocal et tabstop=2 shiftwidth=2 omnifunc=rubycomplete#C
 autocmd FileType ruby compiler ruby
 autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 autocmd FileType ruby let g:rubycomplete_classes_in_global=1
-autocmd FileType rubt let g:rubycomplete_rails=1
+autocmd FileType ruby let g:rubycomplete_rails=1
 
 "Python stuffs
 autocmd FileType python setlocal et tabstop=4 shiftwidth=4 omnifunc=pythoncomplete#Complete

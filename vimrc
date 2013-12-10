@@ -103,6 +103,7 @@ set colorcolumn=80
 hi ColorColumn ctermbg=blue guibg=blue
 set hlsearch
 hi Search ctermbg=124 guibg=124
+hi PmenuSel ctermbg=green
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>

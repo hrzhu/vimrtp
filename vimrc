@@ -42,7 +42,7 @@ if has('mouse')
   set mousehide
 endif
 set backspace=indent,eol,start
-set et ts=2 sw=2
+set et ts=4 sw=4
 
 "settings for different filet types
 "disable automatic comment

@@ -21,6 +21,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'wlangstroth/vim-racket'
 Bundle 'tpope/vim-endwise'
 "Bundle 'vim-scripts/FencView.vim'
+Bundle 'wting/rust.vim'
 
 "gui
 if has("gui_running")

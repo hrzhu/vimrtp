@@ -1,3 +1,4 @@
+set rtp+=~/vimrtp/
 set rtp+=~/vimrtp/bundle/
 set rtp+=~/vimrtp/bundle/vundle/
 set nocp

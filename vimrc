@@ -1,6 +1,7 @@
-set rtp+=~/vimrtp/
-set rtp+=~/vimrtp/bundle/
-set rtp+=~/vimrtp/bundle/vundle/
+set rtp-=~/.vim
+set rtp+=~/vimrtp
+set rtp+=~/vimrtp/bundle
+set rtp+=~/vimrtp/bundle/vundle
 set nocp
 filetype off
 "call pathogen#infect()

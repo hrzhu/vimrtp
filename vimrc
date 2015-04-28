@@ -4,26 +4,26 @@ set rtp+=~/vimrtp/bundle
 set rtp+=~/vimrtp/bundle/vundle
 set nocp
 filetype off
-"call pathogen#infect()
-"call pathogen#helptags()
 
-call vundle#rc("~/vimrtp/bundle")
+call vundle#begin("~/vimrtp/bundle")
 
 " let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'klen/python-mode'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'wlangstroth/vim-racket'
-Bundle 'tpope/vim-endwise'
-"Bundle 'vim-scripts/FencView.vim'
-Bundle 'wting/rust.vim'
+Plugin 'gmarik/vundle'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'klen/python-mode'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'tpope/vim-endwise'
+"Plugin 'vim-scripts/FencView.vim'
+Plugin 'wting/rust.vim'
+
+call vundle#end()
 
 "gui
 if has("gui_running")

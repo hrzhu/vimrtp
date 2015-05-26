@@ -64,6 +64,9 @@ let g:pymode_lint_write = 0 "disable pllint checking when saving
 let g:pymode_folding = 0 "disable auto-folding
 let g:pymode_rope_guess_project = 0
 
+" Make YCM cooperate with pyenv
+let g:ycm_path_to_python_interpreter = '/usr/bin/python' "YCM_Server fails to start if pyenv uses python3
+
 "visual
 set nu
 set t_Co=256
@@ -90,7 +93,9 @@ set statusline+=%f
 "set statusline+=%-3.3n\ "buffer number
 "set statusline+=%f\ "filename
 set statusline+=%h%m%r%w\ " ""status flags
+
 set statusline+=\[%{strlen(&ft)?&ft:'none'}]\ " " file type
+set statusline+=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"} " file encoding
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

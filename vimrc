@@ -10,6 +10,8 @@ call vundle#begin("~/vimrtp/bundle")
 " let Vundle manage Vundle
 Plugin 'gmarik/vundle'
 
+
+Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'klen/python-mode'
@@ -19,9 +21,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'wlangstroth/vim-racket'
-Plugin 'tpope/vim-endwise'
 "Plugin 'vim-scripts/FencView.vim'
-Plugin 'wting/rust.vim'
+"Plugin 'wting/rust.vim'
 
 call vundle#end()
 

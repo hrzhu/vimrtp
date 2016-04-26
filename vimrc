@@ -83,8 +83,8 @@ colorscheme molokai
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_highlighting=1
-hi SyntasticWarning ctermbg=069 guibg=069
-hi SyntasticError  ctermbg=141  guibg=141
+hi SyntasticWarning ctermbg=069 guibg=#5f87ff
+hi SyntasticError  ctermbg=141  guibg=#af87ff
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E221'
 
@@ -111,7 +111,7 @@ set statusline+=%<%P "file position
 set colorcolumn=80
 hi ColorColumn ctermbg=blue guibg=blue
 set hlsearch
-hi Search ctermbg=124 guibg=124
+hi Search ctermbg=124 guibg=#af0000
 hi PmenuSel ctermbg=green
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search

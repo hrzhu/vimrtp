@@ -1,26 +1,27 @@
-set rtp-=~/.vim
-set rtp+=~/vimrtp
-set rtp+=~/vimrtp/bundle
-set rtp+=~/vimrtp/bundle/vundle
+set rtp-=/home/h/.vim
+set rtp+=/home/h/vimrtp
+set rtp+=/home/h/vimrtp/bundle
+set rtp+=/home/h/vimrtp/bundle/vundle
 set nocp
 filetype off
 
-call vundle#begin("~/vimrtp/bundle")
+call vundle#begin("/home/h/vimrtp/bundle")
 
 " let Vundle manage Vundle
 Plugin 'gmarik/vundle'
 
-
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'klen/python-mode'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'wlangstroth/vim-racket'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'lambdalisue/vim-pyenv'
 "Plugin 'vim-scripts/FencView.vim'
 "Plugin 'wting/rust.vim'
 
@@ -64,9 +65,12 @@ autocmd FileType python setlocal et tabstop=4 shiftwidth=4 omnifunc=pythoncomple
 let g:pymode_lint_write = 0 "disable pllint checking when saving
 let g:pymode_folding = 0 "disable auto-folding
 let g:pymode_rope_guess_project = 0
+let g:pymode_rope_completion = 0
 
-" Make YCM cooperate with pyenv
-let g:ycm_path_to_python_interpreter = '/usr/bin/python' "YCM_Server fails to start if pyenv uses python3
+"Make YCM cooperate with pyenv
+"let g:ycm_path_to_python_interpreter = '/usr/bin/python' "YCM_Server fails to start if pyenv uses python3
+let g:ycm_server_python_interpreter='/home/h/.pyenv/shims/python'
+"let g:ycm_global_ycm_extra_conf='/home/h/vimrtp/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 
 "visual
 set nu
